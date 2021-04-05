@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+* {box-sizing: border-box}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: rgb(202, 128, 245);
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  width: 25%; 
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: white;
+}
+
+.navbar a.active {
+  background-color: aqua;
+}
+
+         table{ 
+            border-collapse:separate; 
+        border-spacing: 0 15px; 
+        tr {
+            text-align: left;
+        }
+    </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Inventory Form</title>
+</head>
+<body  bgcolor = "#E0FFFF"> 
+   <div class="navbar">
+      <a href="timesheet.php"><b>Clock in</b></a> 
+      <a href="staff_homepage.html"><b>Home</b></a> 
+      <a class="active" href="product_return.php"><b>Inventory Log</b></a>
+      <a href="staff_login.php"><b>Logout</b></a>
+
+    </div>   
+   <div align = "center">
+   <img src="DPH.jpg" alt="DPH" height="180" width="250"> <h2>INVENTORY LOG</h2>
+      <div style = "width:400px; border: solid 5px #B0E0E6; " align = "left">
+         <div style = "background-color:#ADD8E6; color: #663399; padding:3px;" align = "left">    
+        <div style = "margin:30px">
+         
+            <form action="product_return.php" method="POST">
+                <table align = "center">
+                    <tr>
+                    <td><b>Product ID *:</b></td>
+                    <td><input type= "text" name="product_id" id="product_id" size=5 required></td>
+                    </tr>
+                    <tr>
+                    <td><b>Quantity *:</b></td>
+                    <td><input type= "text" name="quantity" id="quantity" size=5 required></td>
+                    </tr>
+                    <tr>
+                    <td><b>Status *:</b></td>
+                    <td>
+                    <select name="status" id="status" required>
+                    <option value="2"> Returns </option>
+                    <option value="1"> New Stock </option>
+                    <option value="0" > Faulty </option>
+                    </select>
+                    </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Log">
+            </form>
+    
+        <div style = "font-size:11px; color:#cc0000; margin-top:10px"></div>
+        </div>
+    </div>
+    </div>
+ 
+</body>
+</html>
